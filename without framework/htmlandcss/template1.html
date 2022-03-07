@@ -1,0 +1,31 @@
+{{define "products"}}
+
+<div class="col-md-3 col-sm-6 my-3 my-md-0">
+    <form  method="get">
+        <div class="card shadow">
+            <div>
+                <img src="{{ .Image }}" alt="Image1" class="img-fluid card-img-top" style="height: 200px; width: 200px;background-color: lightblue;background: radial-gradient(white 30%,lightblue 70%);">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ .Productname }}</h5>
+                <h6>
+                    <i class="fas fa-star" ></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </h6>
+                <p class="card-text">
+                    Some quick example text to build on the card.
+                </p>
+                <h5>
+                    <small><s class="text-secondary">&#x20b9 {{ .Priceold }}</s></small>
+                    <span class="price\">&#x20b9 {{ .Price }}</span>
+                </h5>
+                <button type="submit"  value ="{{ .Id }}"class="btn btn-warning my-3" name="add">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+           
+            </div>
+        </div>
+    </form>
+</div>
+{{end}}
